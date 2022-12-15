@@ -4,7 +4,7 @@
 
 import random
 
-num = [random.randint(1, 100) for i in range(200)]
+num = [random.randint(1, 100) for i in range(20)]
 print(num)
 
 index_of_num = []
@@ -13,3 +13,6 @@ for i in range(len(num)):
 
 cort_of_num = list(zip(index_of_num, num))
 print(cort_of_num)
+
+result = [i for i in cort_of_num if not (i[0]+i[1]) % 5]
+print(result)
